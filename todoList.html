@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六角代辦事項</title>
+    <link rel="stylesheet" href="./css/todoList.css" />
+  </head>
+  <body>
+    <!--  Navbar  -->
+    <nav class="navbar">
+      <h1>ONLINE TODO LIST</h1>
+      <div class="user-status d-none">
+        <span>"***的代辦"</span>
+        <button href="#" data-signOut>登出</button>
+      </div>
+    </nav>
+
+    <div class="alert d-none"></div>
+
+    <!--  Todo App  -->
+    <div class="todo">
+      <div class="register">
+        <h2>註冊</h2>
+        <form>
+          <div class="register_form mb-16">
+            <label for="register-email">信箱</label
+            ><input type="email" id="register-email" name="user1" />
+            <label for="register-nickname">暱稱</label
+            ><input type="text" id="register-nickname" name="user3" />
+            <label for="register-password">密碼</label
+            ><input
+              type="password"
+              id="register-password"
+              name="user2"
+              autocomplete="current-password"
+            />
+          </div>
+          <button type="submit" class="w_100 mb-16" id="register-btn">註冊</button>
+        </form>
+      </div>
+      <div class="login">
+        <h2>登入</h2>
+        <form>
+          <div class="register_form mb-16">
+            <label for="login-account">帳號</label
+            ><input type="text" id="login-account" name="user1" />
+            <label for="login-password">密碼</label
+            ><input
+              type="password"
+              id="login-password"
+              name="user2"
+              autocomplete="current-password"
+            />
+          </div>
+          <button type="submit" class="w_100 mb-16" id="login-btn">登入</button>
+        </form>
+      </div>
+      <div class="todo-list d-none">
+        <h2 class="todo__title">TODO LIST</h2>
+
+        <!-- Input Section  -->
+        <form data-form class="todo__form">
+          <input
+            required
+            class="todoForm__userInput"
+            type="text"
+            name="userInput"
+            placeholder="請輸入待辦事項"
+          />
+          <input type="submit" class="add-todos-btn" href="#" value="+" />
+        </form>
+
+        <!--  Tabs Section  -->
+        <ul class="todo__tabs">
+          <li class="tab" data-status="all">
+            <button class="tab__inner" data-status="all">全部</button>
+          </li>
+          <li class="tab" data-status="work">
+            <button class="tab__inner" data-status="work">待完成</button>
+          </li>
+          <li class="tab" data-status="done">
+            <button class="tab__inner" data-status="done">已完成</button>
+          </li>
+        </ul>
+
+        <!--  Tasks Section   -->
+        <ul data-taskList class="todo__taskList"></ul>
+
+        <!--   Footer Section     -->
+        <div class="todo__footer">
+          <button data-deleteAllTasksBtn href="#">清除已完成項目</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 同學的代碼(附上更動後解釋) -->
+    <!-- 1. <a> 代表 anchor 也就是超連結，如是觸發 js 事件的按鈕使用 <button> 較合語意 -->
+    <!-- 2. <p> 代表 paragraph 也就是文字篇幅，不可當容器裝載導覽內容，可使用 <nav> -->
+    <!-- 3. 使用 <form> 來裝載用戶輸入資料，並在 onSubmit 時觸發，較為語意、結構化 -->
+
+    <!-- <div class="topbar">
+    <p>
+      <span><i class="fa fa-list-alt" aria-hidden="true"></i> ONLINE TODO LIST
+      </span>
+      <span class="owner">"***的代辦"</span>
+      <a href="#" class="logoutBtn">SIGN OUT</a>
+    </p>
+  </div>
+  <div class="container">
+    <h1>TODO LIST</h1>
+    <div class="card input">
+      <input type="text" class="toDoListContent" placeholder="請輸入待辦事項" />
+      <a href="#" class="btn_add">+</a>
+    </div>
+    <div class="card card_list">
+      <ul class="tab">
+        <li data-status="all" class="active" id="allStatus">全部</li>
+        <li data-status="work">待完成</li>
+        <li data-status="done">已完成</li>
+      </ul>
+      <div class="cart_content">
+        <ul class="list" id="list"></ul>
+        <div class="list_footer">
+          <p></p>
+          <a href="#" class="clear">清除已完成項目</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  </body>
+  <script type="module" src="main.js"></script>
+</html>

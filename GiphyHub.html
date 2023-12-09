@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>giphyhub</title>
+    <link rel="stylesheet" href="./css/GiphyHub.css" />
+  </head>
+  <body>
+    <div class="giphyhub">
+      <div class="giphyhub__inner">
+        <div class="giphyhub__title">
+          <h1>GiphyHub</h1>
+        </div>
+        <h2>Simple Search API From Giphy!</h2>
+        <form data-giphyhub-form class="giphyhubForm">
+          <div class="giphyhubForm__main">
+            <div>
+              <label>
+                API Key
+                <input
+                  autocomplete="off"
+                  name="apiKey"
+                  type="password"
+                  placeholder="請輸入 API Key"
+                  value="qkwA6c1BaMomHISavkuiK62k2IUn23Y3"
+                  required
+                />
+              </label>
+              <label>
+                關鍵字
+                <input name="keyword" type="text" placeholder="請輸入關鍵字" required />
+              </label>
+            </div>
+            <input class="giphyhubForm__submit" value="搜尋" type="submit" />
+          </div>
+          <div class="giphyhubForm__side">
+            <label>
+              分級
+              <select name="rating">
+                <option value="g">g</option>
+                <option value="g">pg</option>
+                <option value="g">pg-13</option>
+                <option value="g">r</option>
+              </select>
+            </label>
+            <label>
+              語言
+              <select name="lang">
+                <option value="en">en</option>
+                <option value="zh-TW">zh-TW</option>
+              </select>
+            </label>
+            <label>
+              張數
+              <input name="limit" type="number" min="1" max="10" value="1" placeholder required />
+            </label>
+          </div>
+        </form>
+      </div>
+      <ul data-giphyhub-gallery class="gallery"></ul>
+    </div>
+
+    <footer class="footer">
+      <p>Powered By GIPHY</p>
+    </footer>
+  </body>
+  <script type="module" src="main.js"></script>
+</html>
